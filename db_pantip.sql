@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2016 at 08:21 AM
+-- Generation Time: Jan 23, 2016 at 04:06 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.0.1
 
@@ -33,7 +33,8 @@ CREATE TABLE `db_pantip` (
   `post_by` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `time_stamp` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `number_of_comments` int(11) DEFAULT NULL,
-  `tags` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `tags` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `emotion` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
