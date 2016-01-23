@@ -125,7 +125,7 @@ function geturl($b,$d){
             
             //--------------------insert into db--------------
         			try {
-                    echo "get into try <br>";
+                    //echo "get into try <br>";
     				$dbhost = "localhost";
 					$dbname = "pantip";
 					$dbusername = "root";
