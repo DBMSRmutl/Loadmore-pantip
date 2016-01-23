@@ -40,8 +40,9 @@ $dbname = "pantip";
 $dom = new DOMDocument('1.0', 'UTF-8');
 
 try {
-    
+    echo "Connected Successfully TABLE $dbname <br>";
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    
     $conn -> exec('SET NAMES utf8');
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $conn->prepare("SELECT id, title, link, post_by, time_stamp, number_of_comments, tags FROM db_pantip"); 
@@ -55,6 +56,7 @@ try {
 }
 catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
+     echo "Connected Error TABLE $dbname <br>";
 }
 $conn = null;
 echo "</table>";
