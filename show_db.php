@@ -14,7 +14,7 @@
             
             <?php
 echo "<table style='border=0: solid 1px black;'>";
-echo "<tr><th>กระทู้ที่</th><th>ชื่อกระทู้</th><th>ลิงค์</th><th>ชื่อผู้โพส</th><th>เวลาที่โพส</th><th>จำนวนความคิดเห็น</th><th>Tag ข้อมูล</th></tr>";
+echo "<tr><th>กระทู้ที่</th><th>ชื่อกระทู้</th><th>ลิงค์</th><th>ชื่อผู้โพส</th><th>เวลาที่โพส</th><th>จำนวนความคิดเห็น</th><th>Tag ข้อมูล</th><th>emotion</th></tr>";
 class TableRows extends RecursiveIteratorIterator { 
     function __construct($it) { 
         parent::__construct($it, self::LEAVES_ONLY); 
@@ -45,7 +45,7 @@ try {
     
     $conn -> exec('SET NAMES utf8');
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT id, title, link, post_by, time_stamp, number_of_comments, tags FROM db_pantip"); 
+    $stmt = $conn->prepare("SELECT id, title, link, post_by, time_stamp, number_of_comments, tags, emotion FROM db_pantip"); 
     $stmt->execute();
 
     // set the resulting array to associative
